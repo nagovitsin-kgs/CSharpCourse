@@ -1,0 +1,15 @@
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\bin\Debug\net6.0\Task_01.exe
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\bin\Debug\net6.0\Task_01.deps.json
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\bin\Debug\net6.0\Task_01.runtimeconfig.json
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\bin\Debug\net6.0\Task_01.dll
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\bin\Debug\net6.0\Task_01.pdb
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\obj\Debug\net6.0\Task_01.csproj.AssemblyReference.cache
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\obj\Debug\net6.0\Task_01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\obj\Debug\net6.0\Task_01.AssemblyInfoInputs.cache
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\obj\Debug\net6.0\Task_01.AssemblyInfo.cs
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\obj\Debug\net6.0\Task_01.csproj.CoreCompileInputs.cache
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\obj\Debug\net6.0\Task_01.dll
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\obj\Debug\net6.0\refint\Task_01.dll
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\obj\Debug\net6.0\Task_01.pdb
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\obj\Debug\net6.0\Task_01.genruntimeconfig.cache
+C:\Users\nagovitsin\Desktop\CSharpCourse\Seminar01\Task_01\obj\Debug\net6.0\ref\Task_01.dll

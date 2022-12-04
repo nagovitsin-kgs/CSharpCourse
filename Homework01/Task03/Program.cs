@@ -1,23 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
 
-class Program
-
+Console.Write("Write number 2: ");
+int N = int.Parse(Console.ReadLine());
+for (int i = 1; i <= N; i++)
 {
-    static void Main(string[] args)
+    if (i % 2 == 0)
     {
-        Console.Write("Write number 1: ");
-        int K = int.Parse(Console.ReadLine());
-        Console.Write("Write number 2: ");
-        int N = int.Parse(Console.ReadLine());
-        for (int i = K; i <= N; i++)
-        {
-            if (i % 2 == 0)
-            {
-                Console.Write(i + " ");
-            }
-        }
-        Console.ReadKey();
+        Console.Write(i + " ");
     }
 }
+Console.ReadKey();
+

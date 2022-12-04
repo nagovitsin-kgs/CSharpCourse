@@ -5,7 +5,7 @@
     if (arg3 > result) result = arg3;       // условие, если да, то result arg3 максимальное значение
     return result;                          // чтобы наш метод, возвращал result
 }
-int[] array {18, 52, 23, 24, 51, 61, 75, 84, 58};
+int[] array { 18, 52, 23, 24, 51, 61, 75, 84, 58 };
 
 // int max1 = Max(a1, b1, c1); 
 // int max2 = Max(a2, b2, c2); 

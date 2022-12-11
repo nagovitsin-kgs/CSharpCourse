@@ -4,7 +4,25 @@
 82 -> 10
 9012 -> 12
 */
+// --- Вариант №1: ---
+/*
+Console.WriteLine("Введите число");
 
+int Number = Convert.ToInt32(Console.ReadLine());
+
+int Sum = 0;
+
+while (Number > 0)
+{
+int Temporary = Number % 10;    // делим и берём остаток после запятой.
+Number = Number / 10;           // делим и берём целое число до запятой (впереди). 
+Sum = Sum + Temporary;          // находим, суммируем и запоминаем сумму прошлую  и остатков от целого числа.
+}
+Console.WriteLine($"Сумма всех цифр в числе: Sum = {Sum}");
+*/
+
+// --- Вариант №2: ---
+/*
 int number = ReadInt("Введите число: ");
 int len = NumberLen(number);
 SumNumbers(number, len);
@@ -40,4 +58,4 @@ void SumNumbers(int n, int len)
     }
     Console.WriteLine(sum);
 }
-
+*/

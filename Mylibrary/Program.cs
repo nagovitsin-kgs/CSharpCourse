@@ -50,6 +50,7 @@
   // [6, 4, 3, 10]
   //  3  2  1   0
   // 10 * 15^0 + 3 * 15^1 + 4 * 15^2 + 6 * 15^3
+  
   public static int ToDec(int[] value)
   {
     int result = 0;

@@ -11,7 +11,7 @@
     {
         for (int i = 0; i < array.Length; i++)
         {
-            array[i] = Random.Shared.Next(0, 15);
+            array[i] = Random.Shared.Next(0, 15); // new Random().Next(0, 15)
         }
     }
 

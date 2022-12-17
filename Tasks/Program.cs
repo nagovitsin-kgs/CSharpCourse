@@ -100,7 +100,82 @@
 
 // 41. Выяснить являются ли три числа сторонами треугольника 
 
-// 42. Определить сколько чисел больше 0 введено с клавиатуры
+// 42. Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+/* (0, 7, 8, -2, -2 -> 2)  и  (1, -7, 567, 89, 223 -> 3) */
+/*
+1. Метод ввода числа с клавиатуры от пользователя. 
+2. Метод создания массива.
+3. Метод заполнения массива.
+4. Метод вывода массива на экран.
+5. Метод определения положительных чисел.
+6. Метод сложения количества положительных чисел.
+7. Метод вывод результата на экран. 
+*/
+
+//1. Метод ввода числа с клавиатуры от пользователя.
+// метод ничего не принимает и не возвращает: 
+void NumbersM()                                                  
+{
+    Console.WriteLine("Введите любые числа через запятую");    
+}
+
+//2. Метод создания массива.
+// метод что-то принимает и что-то возвращает:
+string CreateArray(int size)
+{
+    return string numbers = Console.ReadLine();
+}
+
+//3. Метод заполнения массива.
+//
+void FillArray(int array, string numbers)
+{
+        int size = array.Length;
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = new string[numbers];
+    }
+}
+//string numbers = Console.ReadLine();
+// нам нужно перебрать каждый элемент строки, если это не запятая или пробел, кладм его в массив, если запятая или пробле. делаем ++
+string [] newNumbers = new string [numbers.Length];
+int k = 0;
+for (int i = 0; i < newNumbers.Length; i++)
+{
+  if (numbers[i] == ',')
+  {
+    k++;
+  }
+  else
+  {
+    newNumbers[k] = newNumbers[k]+$"{numbers[i]}";
+  }
+}
+k++;
+
+int [] resultNumbers = new int[k];
+
+PrintArray (resultNumbers, newNumbers);
+int sum = 0;
+for (int i = 0; i < k; i++)
+{
+  if (resultNumbers[i]>0)
+  {
+    sum++;
+  }
+}
+Console.WriteLine ("Количество чисел больше 0: "+sum);
+
+void PrintArray (int [] array, string [] string1)
+{
+  for (int i = 0; i < array.Length; i++)
+  {
+  array[i] = Convert.ToInt32(string1[i]);
+  Console.Write (array[i]+"  ");
+  }
+Console.WriteLine();
+}
+
 
 // 43. Написать программу преобразования десятичного числа в двоичное
 

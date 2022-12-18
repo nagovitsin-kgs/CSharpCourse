@@ -103,43 +103,70 @@
 // 42. Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 /* (0, 7, 8, -2, -2 -> 2)  и  (1, -7, 567, 89, 223 -> 3) */
 /*
-1. Метод ввода числа с клавиатуры от пользователя. 
+1. Метод ввода чисел от пользователя.
 2. Метод создания массива.
-3. Метод заполнения массива.
-4. Метод вывода массива на экран.
-5. Метод определения положительных чисел.
-6. Метод сложения количества положительных чисел.
-7. Метод вывод результата на экран. 
+3. Метод определения количества положительных чисел  введённых с клавиатуры от пользователя.
+4. Метод вывод результата на экран. 
 */
 
-//1. Метод ввода числа с клавиатуры от пользователя.
-// метод ничего не принимает и не возвращает: 
-void NumbersM()                                                  
+// 1. Метод ввода чисел от пользователя.
+string EnterMNumbers(string numbers)
 {
-    Console.WriteLine("Введите любые числа через запятую");    
+    Console.WriteLine("Введите числа:");
+    string numbers = Console.ReadLine();
+    return numbers;
 }
 
-//2. Метод создания массива.
-// метод что-то принимает и что-то возвращает:
-string CreateArray(int size)
+// 2. Метод создания массива.
+int[] CreateArray(int size)
 {
-    return string numbers = Console.ReadLine();
+    return new int[size];
 }
 
-//3. Метод заполнения массива.
-//
-void FillArray(int array, string numbers)
+// 2.1 Заполнение массива.
+void FiiiArray(int[] array)
 {
-        int size = array.Length;
-    for (int i = 0; i < size; i++)
+    int length = length.Length;
+    for (int i = 0; i < length; i++)
     {
-        array[i] = new string[numbers];
+        array[i] = Console.ReadLine();
     }
 }
-//string numbers = Console.ReadLine();
+
+// 3. Метод определения количества положительных чисел  введённых с клавиатуры от пользователя.
+string SumCountPositiveToNumbers(string arr)
+{
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > 0) count++;
+    }  
+}
+
+// 4. Метод вывод результата на экран.
+void PrintResult(int[] array)
+    {
+        int size = array.Length ;
+        for (int i = 0; i < size; i++)
+        {
+            Console.Write($"{array[i]} ");
+        }
+        Console.WriteLine();
+    }
+
+
+
+
+
+/*
+Console.WriteLine ("Введите числа:");
+string numbers = Console.ReadLine();
 // нам нужно перебрать каждый элемент строки, если это не запятая или пробел, кладм его в массив, если запятая или пробле. делаем ++
+
 string [] newNumbers = new string [numbers.Length];
+
 int k = 0;
+
 for (int i = 0; i < newNumbers.Length; i++)
 {
   if (numbers[i] == ',')
@@ -156,7 +183,9 @@ k++;
 int [] resultNumbers = new int[k];
 
 PrintArray (resultNumbers, newNumbers);
+
 int sum = 0;
+
 for (int i = 0; i < k; i++)
 {
   if (resultNumbers[i]>0)
@@ -175,6 +204,9 @@ void PrintArray (int [] array, string [] string1)
   }
 Console.WriteLine();
 }
+*/
+
+
 
 
 // 43. Написать программу преобразования десятичного числа в двоичное

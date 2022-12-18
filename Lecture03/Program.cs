@@ -95,7 +95,7 @@ for (int i = 0; i < 10; i++)
 //-----------------------------------------------
 // --- продолжение метода 4 с помощью цикла for --- копируем выше данные...
 
-string Method4(int count, string text)
+string Method4(int count, string text)   //!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 {
     string result = String.Empty;
     for (int i = 0; i < count; i++)

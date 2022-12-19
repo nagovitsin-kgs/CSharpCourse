@@ -15,7 +15,7 @@ int n = Convert.ToInt32(Console.ReadLine());
 double[,] numbers = new double[m, n];
 
 // 3. Метод заполнения случайными числами.
-void FillArrayRandomNumbers(double[,] array)
+void FillArray2DRandomNumbers(double[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -26,7 +26,7 @@ void FillArrayRandomNumbers(double[,] array)
     }
 }
 // 4. Метод печати двумерного массива.
-void PrintArray(double[,] array)
+void PrintArray2D(double[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -42,5 +42,5 @@ void PrintArray(double[,] array)
 
 // 5. Вызов методов.
 //double[,] numbers = new double[m, n]; 
-FillArrayRandomNumbers(numbers);
-PrintArray(numbers);
+FillArray2DRandomNumbers(numbers);
+PrintArray2D(numbers);

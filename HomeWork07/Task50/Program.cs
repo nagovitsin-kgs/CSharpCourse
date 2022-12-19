@@ -53,6 +53,6 @@ void PrintArray2D(int[,] array)
     }
 }
 
-// 6. Вывод методов на экран.
+// 6. Вызов методов.
 FillArray2DRandomNumbers(numbers);
 PrintArray2D(numbers);

@@ -5,6 +5,7 @@
    5 9 2 3
    8 4 2 4
    17 -> такого числа в массиве нет  */
+Console.Clear();
 
 // 1. Ввод количества строк и столбцов для создания массива.
 Console.Write("Введите количество строк m: ");
@@ -14,17 +15,17 @@ Console.Write("Введите количество столбцов n: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 // 2. Создаем массив из строк 10 и стобцов 10.
-int [,] numbers = new int [10,10];
+int [,] numbers = new int [m,n];
 
 // 3. Проверка условия заданных строк с клавиатуры со строками в двумерном массиве, аналогично и со столбцами.
-if (m > numbers.GetLength(0) || n > numbers.GetLength(1))
-{
-    Console.WriteLine("такого элемента нет");
-}
-else
-{
-    Console.WriteLine($"Возврат значения элемента {m} строки и {n} столбца равно {numbers[m-1,n-1]}");
-}
+// if (m > numbers.GetLength(0) || n > numbers.GetLength(1))
+// {
+//     Console.WriteLine("такого элемента нет");
+// }
+// else
+// {
+//     Console.WriteLine($"Возврат значения элемента {m} строки и {n} столбца равно {numbers[m-1,n-1]} ");
+// }
 
 // 4. Метод заполнения массива случайными целыми числами.
 void FillArray2DRandomNumbers(int[,] array)
@@ -49,10 +50,26 @@ void PrintArray2D(int[,] array)
             Console.Write(array[i,j] + " ");
         }   
         Console.Write("]");
-        Console.WriteLine(""); 
+        Console.WriteLine("");
+            
+    }
+}
+
+int ReturnValueElement(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            int valueElement = matr[matr.GetLength(1) - 1, matr.GetLength(1) - 1];
+            Console.WriteLine(valueElement);
+        }
     }
 }
 
 // 6. Вызов методов.
+
 FillArray2DRandomNumbers(numbers);
 PrintArray2D(numbers);
+ReturnValueElement(numbers);
+

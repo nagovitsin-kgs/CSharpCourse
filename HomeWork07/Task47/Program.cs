@@ -4,6 +4,7 @@
    1 -3,3 8 -9,9
    8 7,8 -7,1 9   
 */
+
 // 1. Введём количество строк и столбцов с клавиатуры.
 Console.Write("Введите количество строк m: ");
 int m = Convert.ToInt32(Console.ReadLine());
@@ -11,8 +12,12 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов n: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-// 2. Создадим двумерный массив.
-double[,] numbers = new double[m, n];
+
+// 2. Метод создания двумерного массива.
+double[,] CreateArray2D(int m, int n)
+{
+    return new double[m,n];
+} 
 
 // 3. Метод заполнения случайными числами.
 void FillArray2DRandomNumbers(double[,] array)
@@ -33,14 +38,15 @@ void PrintArray2D(double[,] array)
         Console.Write("[ ");
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(array[i, j] + " ");
+            Console.Write(" " + array[i, j] + " ");
         }
         Console.Write("]");
-        Console.WriteLine(" ");
+        Console.WriteLine("");
     }
 }
 
 // 5. Вызов методов.
-//double[,] numbers = new double[m, n]; 
+
+double[,] numbers = CreateArray2D(m,n);
 FillArray2DRandomNumbers(numbers);
 PrintArray2D(numbers);

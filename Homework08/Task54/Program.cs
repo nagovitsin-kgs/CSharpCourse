@@ -27,11 +27,10 @@ void InputWithKeyboardsNumberRowsAndColumns(out int rows, out int columns)
     Console.Write("Введите количество столбцов: columns = ");
     columns = Convert.ToInt32(Console.ReadLine());
 }
-
 //  2.Метод создания двумерного массива.
-void CreateArray2D(int rows, int columns)
+int[,] CreateArray2D(int rows, int columns)
 {
-    int[,] matrix = new int[rows, columns];
+    return new int[rows, columns];
 }
 
 //  3. Метод заполнения двумерного массива случайными целыми числами.
@@ -72,7 +71,7 @@ void ArrangeArray2DToDescending(int[,] numbers)
     Console.WriteLine("Массив с упорядоченными значениями: ");
 }
 
-//  5. Метод печати двумерного массива. 
+//  5.Метод печати двумерного массива. 
 void PrintArray2D(int[,] array2D)
 {
     for (int i = 0; i < array2D.GetLength(0); i++)
@@ -88,14 +87,24 @@ void PrintArray2D(int[,] array2D)
 }
 
 //  6. Вывод методов на экран. 
+
 int rows, columns;
 InputWithKeyboardsNumberRowsAndColumns(out rows, out columns);
-
-CreateArray2D(rows, columns);
-int[,] matrix = new int[rows, columns];
+int[,] matrix = CreateArray2D(rows, columns);
 FillArray2DRandomNumbers(matrix);
 PrintArray2D(matrix);
 
 ArrangeArray2DToDescending(matrix);
 
 PrintArray2D(matrix);
+
+
+
+
+// // public static class Test
+// // {
+// //     public static void Main()
+// //     {
+// //         PrintArray2D();
+// //     }
+// // }

@@ -27,6 +27,7 @@ void InputWithKeyboardsNumberRowsAndColumns(out int rows, out int columns)
     Console.Write("Введите количество столбцов: columns = ");
     columns = Convert.ToInt32(Console.ReadLine());
 }
+
 //  2.Метод создания двумерного массива.
 int[,] CreateArray2D(int rows, int columns)
 {
@@ -48,7 +49,6 @@ void FillArray2DRandomNumbers(int[,] array)
 }
 
 //  4. Метод упорядочивания двумерного массива по убыванию.
-
 void ArrangeArray2DToDescending(int[,] numbers)
 {
     for (int i = 0; i < numbers.GetLength(0); i++)
@@ -86,25 +86,19 @@ void PrintArray2D(int[,] array2D)
     }
 }
 
-//  6. Вывод методов на экран. 
+//  6. Метод вызова всех методов на экран. 
+void ChallengeEveryoneMethods()
+{
+    int rows, columns;
+    InputWithKeyboardsNumberRowsAndColumns(out rows, out columns);
+    int[,] matrix = CreateArray2D(rows, columns);
+    FillArray2DRandomNumbers(matrix);
+    PrintArray2D(matrix);
 
-int rows, columns;
-InputWithKeyboardsNumberRowsAndColumns(out rows, out columns);
-int[,] matrix = CreateArray2D(rows, columns);
-FillArray2DRandomNumbers(matrix);
-PrintArray2D(matrix);
+    ArrangeArray2DToDescending(matrix);
 
-ArrangeArray2DToDescending(matrix);
+    PrintArray2D(matrix);
+}
 
-PrintArray2D(matrix);
-
-
-
-
-// // public static class Test
-// // {
-// //     public static void Main()
-// //     {
-// //         PrintArray2D();
-// //     }
-// // }
+//  7. Вызов всех методов, запуск программы.
+ChallengeEveryoneMethods();

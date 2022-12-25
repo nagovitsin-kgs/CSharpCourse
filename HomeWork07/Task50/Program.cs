@@ -1,45 +1,31 @@
-﻿/* Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
-   и возвращает значение этого элемента или же указание, что такого элемента нет.
+﻿/* Задача 50. Напишите программу, которая на вход принимает с клавиатуры двумерный массив mхn, а затем 
+   возвращает значение элемента [m,n].
    Например, задан массив:
    1 4 7 2
    5 9 2 3
-   8 4 2 4
-   17 -> такого числа в массиве нет  */
+   8 4 2 4   => вернёт последнюю 4 */
+
 Console.Clear();
 
-// 1. Ввод количества строк и столбцов для создания массива.
-Console.Write("Введите количество строк m: ");
-int m = Convert.ToInt32(Console.ReadLine());
+void EnterCountRowsColumns(out int m, out int n)
+{
+    Console.Write("Введите количество строк m: ");
+    m = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите количество столбцов n: ");
+    n = Convert.ToInt32(Console.ReadLine());
+}
 
-Console.Write("Введите количество столбцов n: ");
-int n = Convert.ToInt32(Console.ReadLine());
-
-// 2. Создаем массив из строк 10 и стобцов 10.
-int [,] numbers = new int [m,n];
-
-// 3. Проверка условия заданных строк с клавиатуры со строками в двумерном массиве, аналогично и со столбцами.
-// if (m > numbers.GetLength(0) || n > numbers.GetLength(1))
-// {
-//     Console.WriteLine("такого элемента нет");
-// }
-// else
-// {
-//     Console.WriteLine($"Возврат значения элемента {m} строки и {n} столбца равно {numbers[m-1,n-1]} ");
-// }
-
-// 4. Метод заполнения массива случайными целыми числами.
 void FillArray2DRandomNumbers(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
-        {        
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-                array [i,j] = new Random().Next(-100, 100);
-            }   
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(-100, 100);
         }
+    }
 }
 
-// 5. Метод печати двумерного массива. 
 void PrintArray2D(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -47,29 +33,34 @@ void PrintArray2D(int[,] array)
         Console.Write("[ ");
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(array[i,j] + " ");
-        }   
+            Console.Write(array[i, j] + " ");
+        }
         Console.Write("]");
         Console.WriteLine("");
-            
     }
 }
 
-int ReturnValueElement(int[,] matr)
+int PrintReturnValueElementEnteredToRowAndColumn(int[,] matr)
 {
+    int valueElement = 0;
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            int valueElement = matr[matr.GetLength(1) - 1, matr.GetLength(1) - 1];
-            Console.WriteLine(valueElement);
+            valueElement = matr[matr.GetLength(1) - 1, matr.GetLength(1) - 1];
         }
     }
+    Console.WriteLine($"Значение элемента в матрице valueElement[m,n] = {valueElement} ");
+    return valueElement; // если в методе void, то без этой строки.
 }
 
-// 6. Вызов методов.
 
+int m, n;
+EnterCountRowsColumns(out m, out n);
+
+int[,] numbers = new int[m, n];
 FillArray2DRandomNumbers(numbers);
-PrintArray2D(numbers);
-ReturnValueElement(numbers);
 
+PrintArray2D(numbers);
+
+PrintReturnValueElementEnteredToRowAndColumn(numbers);

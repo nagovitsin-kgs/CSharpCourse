@@ -82,7 +82,7 @@ void PrintArray2D(int[,] array2D)
         {
             Console.Write(array2D[i, j] + " ");
         }
-        Console.Write("]");
+        Console.Write("] ");
         Console.WriteLine("");
     }
 }

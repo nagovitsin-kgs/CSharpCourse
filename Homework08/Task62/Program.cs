@@ -1,9 +1,11 @@
 ﻿/* Задача 62: Заполните спирально массив 4 на 4. */
 
-Console.WriteLine("Введите размер массива");
+Console.Clear();
+
+Console.Write("Введите размерность квадратного массива: size = ");
 int size = Convert.ToInt32(Console.ReadLine());
 
-int[,] nums = new int[size, size];
+int[,] matrix = new int[size, size];
 
 int num = 1;
 int i = 0;
@@ -11,7 +13,7 @@ int j = 0;
 
 while (num <= size * size)
 {
-    nums[i, j] = num;
+    matrix[i, j] = num;
     if (i <= j + 1 && i + j < size - 1)
         ++j;
     else if (i < j && i + j >= size - 1)
@@ -23,7 +25,7 @@ while (num <= size * size)
     ++num;
 }
 
-PrintArray(nums);
+PrintArray(matrix);
 
 void PrintArray(int[,] array)
 {

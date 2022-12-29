@@ -5,19 +5,18 @@
 
 Console.Clear();
 
-Console.WriteLine("Введите два положительных числа: M и N.");
-
 int m = InputInt("Введите: M = ");
 int n = InputInt("Введите: N = ");
 
-
+/*
 int InputInt(string output)
 {
     Console.Write(output);
     return int.Parse(Console.ReadLine());
 }
+*/
 
-
+/*
 int Akkerman(int m, int n)
 {
     if (m == 0)
@@ -27,6 +26,6 @@ int Akkerman(int m, int n)
     else
         return Akkerman(m - 1, Akkerman(m, n - 1));
 }
+*/
 
-
-Console.WriteLine($"A({m}, {n}) = {Akkerman(m, n)}");
+//Console.WriteLine($"A({m}, {n}) = {Akkerman(m, n)}");

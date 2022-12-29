@@ -16,8 +16,8 @@ int n = Convert.ToInt32(Console.ReadLine());
 // 2. Метод создания двумерного массива.
 double[,] CreateArray2D(int m, int n)
 {
-    return new double[m,n];
-} 
+    return new double[m, n];
+}
 
 // 3. Метод заполнения случайными числами.
 void FillArray2DRandomNumbers(double[,] array)
@@ -47,6 +47,6 @@ void PrintArray2D(double[,] array)
 
 // 5. Вызов методов.
 
-double[,] numbers = CreateArray2D(m,n);
+double[,] numbers = CreateArray2D(m, n);
 FillArray2DRandomNumbers(numbers);
 PrintArray2D(numbers);

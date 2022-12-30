@@ -5,8 +5,8 @@ M = 4; N = 8. -> 30  */
 
 Console.Clear();
 
-int m = InputInt("Введите: M = ");
-int n = InputInt("Введите: N = ");
+int m = InputInt("Введите: m = ");
+int n = InputInt("Введите: n = ");
 
 int InputInt(string output)
 {

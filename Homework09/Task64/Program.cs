@@ -11,13 +11,19 @@ N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"   */
 
 Console.Clear();
 
-// 1. Метод ввода натурального числа от N до 1.
-int InputNaturalNumber(out int n)
+// 1. Метод ввода натурального числа.
+int InputNaturalNumber(string output)
 {
-    Console.Write("Введите натуральное число: n = ");
-    n = Convert.ToInt32(Console.ReadLine());
-    return n;
+    Console.Write(output);
+    return int.Parse(Console.ReadLine());
 }
+// или ---:
+// int InputNaturalNumber(out int n)
+// {
+//     Console.Write("Введите натуральное число: n = ");
+//     n = Convert.ToInt32(Console.ReadLine());
+//     return n;
+// }
 
 // 2. Метод расчёта натуральных чисел в промежутке от N до 1.
 int NaturalNumbersToBetweenRecursion(int n, int m)
@@ -40,10 +46,13 @@ int NaturalNumbersToBetweenRecursion(int n, int m)
 // 3. Метод всех методов и печати на экран.
 void MethodEveryoneMethods()
 {
-    int n = InputNaturalNumber(out n);
+    int n = InputNaturalNumber("Введите натуральное число: n = ");
+    //int n = InputNaturalNumber(out n); 
 
     int m = 1;
     Console.WriteLine(NaturalNumbersToBetweenRecursion(n, m));
 }
 
 MethodEveryoneMethods();
+
+
